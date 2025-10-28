@@ -3,7 +3,7 @@
 # Oliver Shepherd
 
 echo "Enter an animal in all capital letters (or 'Goodbye' to exit):"
-read animal || animal="Goodbye"
+read -r animal || animal="Goodbye"
 animal=${animal%$'\r'}
 
 while [ "$animal" != "Goodbye" ]; do
@@ -25,7 +25,7 @@ while [ "$animal" != "Goodbye" ]; do
     echo "A $animal is a $result"
     
     echo "Enter an animal in all capital letters (or 'Goodbye' to exit):"
-    read animal || break
+    read -r animal || break
     animal=${animal%$'\r'}
 done
 
